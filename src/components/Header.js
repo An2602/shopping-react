@@ -13,7 +13,7 @@ function Header() {
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/products">Products</Nav.Link>
-            <Nav.Link href="/cart"><FaCartPlus/></Nav.Link>
+            <Nav.Link href="/cart"><FaCartPlus/>Cart</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
