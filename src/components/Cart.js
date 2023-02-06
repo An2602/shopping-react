@@ -1,17 +1,24 @@
-import Productincart from "./Productincart"
-import { Row, Col } from 'react-bootstrap';
+import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import axios from 'axios';
+import Cartlist from './Cartlist';
+
+function cart({product,cart, setCart}) {
+    
 
 
-function Cart({cart, onDelete }) {
-  return (
-    <Row className="justify-content-around">
-      {cart.map((productincart, index) => (
-        <Col key={productincart.id} xs={6} md={3} className="mb-2 custom-col">
-          <Productincart productincart={productincart} onDelete={onDelete}/>
-        </Col>
-      ))}
-    </Row>
-  )
-}
+        return (
+        
+        <div>
+            
+            {cart.map(product => <Cartlist key={product.id} product={product} cart={cart} setCart={setCart}/>)}
 
-export default Cart
+          
+            
+        </div>
+        )
+    }
+  
+  
+export default cart
