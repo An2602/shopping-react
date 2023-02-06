@@ -5,7 +5,7 @@ function Products({product,cart}) {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr',
     gridGap: '0.1rem',
-    width:'80%',
+    width:'100%',
 };
   return (
     <div style={cardListStyle}>
