@@ -4,31 +4,32 @@ import React from 'react'
 // import axios from 'axios';
 import Cartlist from './Cartlist';
 
+function cart({ cart, setCart }) {
+  return (
+    <div>
+      {cart.map((_products, index) => (
+        <CartlistRow
+          key={index}
+          products={cart.slice(index * 4, index * 4 + 4)}
+          setCart={setCart}
+        />
+      ))}
+    </div>
+  );
+}
 
 function CartlistRow({ products, setCart }) {
     return (
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {products.map(product => (
           <div style={{ width: "25%" }}>
-            <Cartlist product={product} setCart={setCart} />
+            <Cartlist product={product} setCart={setCart}/>
           </div>
         ))}
       </div>
     );
   }
 
-function cart({ product, cart, setCart }) {
-    return (
-      <div>
-        {cart.map((products, index) => (
-          <CartlistRow
-            key={index}
-            products={cart.slice(index * 4, index * 4 + 4)}
-            setCart={setCart}
-          />
-        ))}
-      </div>
-    );
-  }
+
 
 export default cart

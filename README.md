@@ -68,3 +68,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<!-- in function App -->
+# const [product,setProduct]=useState([]) and take the data from backend (/products/)
+# const [cart,setCart]=useState([]) and take the data from backend (/cart/)
+
+<!-- Routes -->
+# make /product path (connect it to Products (Product.js))
+# make /cart path (connect it to Cart (Cart.js))
+
+<!-- create Products.js -->
+# create function Products and return the product after map. connect it to Product
+
+<!-- create Product.js -->
+# create function Product and return each product by name, description and price
+# create AddToCart function that let you add the product to cart
+
+<!-- create Cart.js -->
+# create function cart and return the product after map. connect it to Cartlist
+
+<!-- create Cartlist -->
+# create function Cartlist and return each product by name, price and quantity
+# create function Deletefromcart 
+# create function updatecart

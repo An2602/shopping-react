@@ -9,8 +9,6 @@ function Products({product,cart}) {
 };
   return (
     <div style={cardListStyle}>
-         {/* for product in products:
-             return '<Product ' */}
     {product.map(product => <Product key={product.id} product={product} cart={cart}/>)}
  
 

@@ -9,23 +9,17 @@ function Product({ product, setCartlist }) {
 
 
     function AddToCart(productId) {
-        const product = { product: productId, quantity: 1 }
-        axios.post(`http://127.0.0.1:8000/cart/`, product
-
-        )
-            .then(response => {
-                setCartlist(data => [...data, product])
-
-                alert('Successes');
-
-
-            })
-            .catch(error => {
-
-                alert('Data not transfer');
-
-            });
-    }
+        const product = { product: productId, quantity: 1 };
+        axios
+          .post(`http://127.0.0.1:8000/cart/`, product)
+          .then(response => {
+            setCartlist(data => setCartlist(data, product));
+            alert("Successes");
+          })
+          .catch(error => {
+            alert("you already got one of this in your cart");
+          });
+      }
 
 
 
