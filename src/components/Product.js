@@ -11,15 +11,15 @@ function Product({ product, setCartlist }) {
     function AddToCart(productId) {
         const product = { product: productId, quantity: 1 };
         axios
-          .post(`http://127.0.0.1:8000/cart/`, product)
-          .then(response => {
-            setCartlist(data => setCartlist(data, product));
-            alert("Successes");
-          })
-          .catch(error => {
-            alert("you already got one of this in your cart");
-          });
-      }
+            .post(`http://127.0.0.1:8000/cart/`, product)
+        //   .then(response => {
+        //     setCartlist(data => setCartlist(data, product));
+        //     alert("Successes");
+        //   })
+        //   .catch(error => {
+        //     alert("you already got one of this in your cart");
+        //   });
+    }
 
 
 
@@ -29,7 +29,7 @@ function Product({ product, setCartlist }) {
 
         <div>
 
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem', backgroundColor: 'lightblue' }}>
                 <Card.Img variant="top" src={`http://127.0.0.1:8000/static${product.image}`} alt={product.name} style={{ height: 300, width: '100%' }} />
                 <Card.Body>
                     <Card.Title>{product.name}</Card.Title>
