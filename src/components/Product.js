@@ -12,13 +12,6 @@ function Product({ product, setCartlist }) {
         const product = { product: productId, quantity: 1 };
         axios
             .post(`http://127.0.0.1:8000/cart/`, product)
-        //   .then(response => {
-        //     setCartlist(data => setCartlist(data, product));
-        //     alert("Successes");
-        //   })
-        //   .catch(error => {
-        //     alert("you already got one of this in your cart");
-        //   });
     }
 
 
